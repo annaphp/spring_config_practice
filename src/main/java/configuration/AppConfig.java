@@ -14,9 +14,13 @@ public class AppConfig {
      */
 	@Bean
 	public Game mgame(){
-		return new BaseballGame(home(),home());
-		
+		//dependency injection through constructor
+		Game game = new BaseballGame(home());
+		//dependency injection through setter
+		game.setAwayTeam(away());
+		return game;
 	}
+	
 	@Bean
 	public Team home(){
 		return new RedSox();

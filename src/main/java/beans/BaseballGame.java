@@ -10,10 +10,13 @@ public class BaseballGame implements Game{
 	}
 	
 	public BaseballGame(Team homeTeam, Team awayTeam){
-		if(homeTeam == awayTeam) System.out.println("home and away are the same object on the heap");
-		
+		if(homeTeam == awayTeam) System.out.println("home and away are the same object on the heap");	
 		this.homeTeam = homeTeam;
 		this.awayTeam = awayTeam;
+	}
+	
+	public BaseballGame(Team homeTeam){
+		this.homeTeam = homeTeam;
 	}
 
 	public void setHomeTeam(Team team) {
